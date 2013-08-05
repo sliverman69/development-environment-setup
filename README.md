@@ -22,6 +22,10 @@ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
 brew update
 
+- Install Git
+-------------
+brew install git
+
 - Install Rbenv and Ruby-build
 ------------------------------
 brew install rbenv ruby-build
@@ -38,3 +42,11 @@ rbenv rehash
 
 - Install Postgres
 ------------------
+brew install postgresql
+initdb /usr/local/var/postgres -E utf8
+ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+
+echo "alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log'" >> ~/.bash_profile
+source ~/.bash_profile
+pg start
