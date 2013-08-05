@@ -50,3 +50,9 @@ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 echo "alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log'" >> ~/.bash_profile
 source ~/.bash_profile
 pg start
+
+- Install a text Editor
+-----------------------
+- install Sublime Text 2: http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.dmg
+- make and install TextMate (I'm not helping you with this...someone else can make the
+  tutorial...it was a pain in the ass for me)
