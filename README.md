@@ -60,3 +60,48 @@ pg start
 - Install SourceTree for graphical Git management
 -------------------------------------------------
 http://www.sourcetreeapp.com/
+
+Setting Up a Dev Environment for Ruby on Rails on Linux (Debian based)
+=============================
+
+Preparing for Ruby
+------------------
+- Get a Github account
+----------------------
+http://www.github.com
+
+Bash Instructions
+-----------------
+Install Dependencies:
+```bash
+apt-get update
+apt-get install git build-essential zlib1g-dev libreadline-dev libssl-dev libcurl4-openssl-dev libxslt-dev libxml2-dev
+```
+Install Rbenv and Ruby-build:
+```bash
+git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+
+rbenv install 1.9.3-p448 && rbenv global 1.9.3-p448
+rbenv rehash
+```
+Clone Site Repo:
+```bash
+git clone https://github.com/Dominus-Development/site.git
+
+cd site
+gem install bundler
+rbenv rehash
+bundle install
+cp config/environment_variables.yml.sample config/environment_variables.yml
+nano environment_variables.yml
+```
+
+- Install a text Editor
+-----------------------
+- install Sublime Text 2: http://www.sublimetext.com/
+- make and install TextMate (I'm not helping you with this...someone else can make the
+  tutorial...it was a pain in the ass for me)
