@@ -103,5 +103,8 @@ nano environment_variables.yml
 - Install a text Editor
 -----------------------
 - install Sublime Text 2: http://www.sublimetext.com/
+- ----------------------
+- download the file for your system (either x64 or x86 found with uname -m)
+- tar -xvf Sublime*.tar.bz2
 - make and install TextMate (I'm not helping you with this...someone else can make the
   tutorial...it was a pain in the ass for me)
