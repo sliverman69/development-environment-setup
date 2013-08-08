@@ -102,5 +102,11 @@ bundle exec wagon pull production
 - Install a text Editor
 -----------------------
 - install Sublime Text 2: http://www.sublimetext.com/
+- ----------------------
+- download the file for your system (uname -m tells you whether x64 or x86)
+- cd to the directory where you downloaded the file
+- tar -xvf Sublime*.tar.bz2
+- echo 'export PATH="$HOME/Downloads/Sublime Text 2/:$PATH"' >> ~/.bashrc
+- source .bashrc
 - make and install TextMate (I'm not helping you with this...someone else can make the
   tutorial...it was a pain in the ass for me)
