@@ -90,14 +90,13 @@ rbenv rehash
 ```
 Clone Site Repo:
 ```bash
-git clone https://github.com/Dominus-Development/site.git
+git clone https://github.com/Dominus-Development/site-subdomains.git
 
-cd site
+cd site-subdomains/www/
 gem install bundler
 rbenv rehash
 bundle install
-cp config/environment_variables.yml.sample config/environment_variables.yml
-nano environment_variables.yml
+bundle exec wagon pull production
 ```
 
 - Install a text Editor
